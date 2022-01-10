@@ -1,0 +1,18 @@
+<table class="table table-dark table-hover table-striped">
+    <tr>
+        <th th:text="#{car.table.name}"></th>
+        <th th:text="#{car.table.registrationNumber}"></th>
+        <th th:text="#{car.table.productionYear}"></th>
+        <th th:text="#{car.table.color}"></th>
+        <th th:text="#{car.table.fixedDate}"></th>
+        <th th:text="#{car.table.isFixed}"></th>
+    </tr>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.name}"></td>
+        <td th:text="${car.registrationNumber}"></td>
+        <td th:text="${car.productionYear}"></td>
+        <td th:text="${car.color}"></td>
+        <td th:text="${car.fixedDate}"></td>
+        <td th:text="${car.isFixed}"></td>
+    </tr>
+</table>
