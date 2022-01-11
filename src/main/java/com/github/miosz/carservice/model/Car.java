@@ -1,11 +1,9 @@
 package com.github.miosz.carservice.model;
 
 import com.github.miosz.carservice.enums.Color;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 public class Car {
@@ -16,11 +14,15 @@ public class Car {
     @Min(1900)
     @Max(2022)
     private int productionYear;
-    @NotNull
     private Color color;
+    @NotNull
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate serviceDate;
     private LocalDate fixedDate;
     private boolean isFixed;
+
+    public Car() {
+    }
 
     public Car(String name, String registrationNumber, int productionYear, Color color, LocalDate serviceDate, LocalDate fixedDate, boolean isFixed) {
         this.name = name;

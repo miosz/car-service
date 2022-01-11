@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title th:text="#{index.title}"></title>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <h1 th:text="#{car.add.form.header}" th:class="display-4"></h1>
+</div>
+
+<div th:class="'container p-3 my-3 bg-dark text-white'">
+    <div th:insert="../fragments/menu"></div>
+    <p th:text="#{car.add.form.success}" th:class="lead"></p>
+    <div th:insert="../fragments/table-cars-to-fix"></div>
+
+</div>
+
+</body>
+</html>
