@@ -49,6 +49,9 @@ public class CarController {
         if (bindingResult.hasErrors()) {
             return "cars-add-form";
         }
+        carService.addNewCar(car);
+        carService.saveToFile();
+        model.addAttribute("cars", carService.getCars());
         return "cars-add-form-success";
     }
 }

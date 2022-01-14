@@ -8,11 +8,27 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class CarService {
+public class CarService implements CarInterface {
     final Cars cars;
 
     public CarService(Cars cars) {
         this.cars = cars;
+    }
+
+    public List<Car> getCars() {
+        return cars.getCars();
+    }
+
+    public void addNewCar(Car car) {
+        cars.addNewCar(car);
+    }
+
+    public void saveToFile() {
+        cars.saveToFile();
+    }
+
+    public void loadFromFile() {
+        cars.loadFromFile();
     }
 
     public List<Car> getCarsToFix() {
