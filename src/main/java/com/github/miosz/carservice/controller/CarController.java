@@ -5,9 +5,7 @@ import com.github.miosz.carservice.service.CarService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -36,6 +34,15 @@ public class CarController {
     public String getFixCars(Model model) {
         model.addAttribute("cars", carService.getCarsToFix());
         return "cars-fix";
+    }
+
+    @PostMapping("/cars/fix/{registrationNumber}")
+    public String postFixCar(@PathVariable("registrationNumber") String registrationNumber, Model model) {
+        Car car = carService.getCarByRegistrationNumber(registrationNumber);
+        carService.fixCar(car);
+        carService.setFixedDate(car);
+        model.addAttribute("cars", carService.getCarsToFix());
+        return "redirect:/cars/fix";
     }
 
     @GetMapping("/cars/fixed")

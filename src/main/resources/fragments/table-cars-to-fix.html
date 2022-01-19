@@ -6,13 +6,19 @@
         <th th:text="#{car.table.color}"></th>
         <th th:text="#{car.table.serviceDate}"></th>
         <th th:text="#{car.table.isFixed}"></th>
+        <th th:text="#{car.table.fixAsterisk}"></th>
     </tr>
-    <tr th:each="car : ${cars}">
+    <tr th:each="car, iterator : ${cars}">
         <td th:text="${car.name}"></td>
         <td th:text="${car.registrationNumber}"></td>
         <td th:text="${car.productionYear}"></td>
         <td th:text="${car.color}"></td>
         <td th:text="${car.serviceDate}"></td>
         <td th:text="${car.isFixed}"></td>
+        <td>
+            <form th:action="@{|/cars/fix/${car.registrationNumber}|}" th:method="post">
+                <button type="submit" th:text="#{car.table.fix}"></button>
+            </form>
+        </td>
     </tr>
 </table>
