@@ -16,8 +16,8 @@
         <td th:text="${car.serviceDate}"></td>
         <td th:text="${car.isFixed}"></td>
         <td>
-            <form th:action="@{|/cars/fix/${car.registrationNumber}|}" th:method="post">
-                <button type="submit" th:text="#{car.table.fix}"></button>
+            <form th:action="@{/cars/fix/{registrationNumber}(registrationNumber=${car.registrationNumber})}" th:method="post">
+                <button type="submit" th:text="#{car.table.fix}" th:class="'btn btn-success'"></button>
             </form>
         </td>
     </tr>
