@@ -10,9 +10,11 @@ public interface CarInterface {
 
     void addNewCar(Car car);
 
-    void saveToFile();
+    void removeFixedCar(Car car);
 
-    void loadFromFile();
+    void saveCarsToFixToFile();
+
+    void loadCarsToFixFromFile();
 
     List<Car> getCarsToFix();
 

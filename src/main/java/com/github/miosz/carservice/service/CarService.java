@@ -24,12 +24,20 @@ public class CarService implements CarInterface {
         cars.addNewCar(car);
     }
 
-    public void saveToFile() {
-        cars.saveToFile();
+    public void removeFixedCar(Car car) {
+        cars.removeFixedCar(car);
     }
 
-    public void loadFromFile() {
-        cars.loadFromFile();
+    public void saveCarsToFixToFile() {
+        cars.saveCarsToFixToFile();
+    }
+
+    public void loadCarsToFixFromFile() {
+        cars.loadCarsToFixFromFile();
+    }
+
+    public void loadFixedCarsFromDirectory() {
+        cars.loadFixedCarsFromDirectory();
     }
 
     public List<Car> getCarsToFix() {
@@ -37,7 +45,11 @@ public class CarService implements CarInterface {
     }
 
     public List<Car> getFixedCars() {
-        return cars.getCars().stream().filter(c -> c.isFixed()).collect(Collectors.toList());
+        return cars.getFixedCars();
+    }
+
+    public List<Car> getAllCars() {
+        return cars.getAllCars();
     }
 
     public Car getCarByRegistrationNumber(String registrationNumber) {
@@ -50,5 +62,9 @@ public class CarService implements CarInterface {
 
     public void setFixedDate(Car car) {
         car.setFixedDate(LocalDate.now());
+    }
+
+    public void saveFixedCarToFile(List<Car> fixedCars) {
+        cars.saveFixedCarToFile(fixedCars);
     }
 }

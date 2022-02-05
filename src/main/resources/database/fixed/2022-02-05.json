@@ -1,0 +1,17 @@
+[ {
+  "name" : "Kia",
+  "registrationNumber" : "GD456AB",
+  "productionYear" : 2017,
+  "color" : "WHITE",
+  "serviceDate" : "2022-02-01",
+  "fixedDate" : "2022-02-05",
+  "fixed" : true
+}, {
+  "name" : "Opel",
+  "registrationNumber" : "GS123EF",
+  "productionYear" : 2019,
+  "color" : "GRAY",
+  "serviceDate" : "2022-02-01",
+  "fixedDate" : "2022-02-05",
+  "fixed" : true
+} ]

@@ -1,6 +1,5 @@
 package com.github.miosz.carservice.controller;
 
-import com.github.miosz.carservice.repository.Cars;
 import com.github.miosz.carservice.service.CarService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,8 +16,9 @@ public class IndexController {
 
     @GetMapping("/")
     public String getIndex(Model model) {
-        carService.loadFromFile();
-        model.addAttribute("cars", carService.getCars());
+        carService.loadFixedCarsFromDirectory();
+        carService.loadCarsToFixFromFile();
+        model.addAttribute("cars", carService.getAllCars());
         return "index";
     }
 }

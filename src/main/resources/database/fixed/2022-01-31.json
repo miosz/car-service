@@ -1,0 +1,9 @@
+[ {
+  "name" : "BMW",
+  "registrationNumber" : "GA123AA",
+  "productionYear" : 2000,
+  "color" : "WHITE",
+  "serviceDate" : [ 2022, 1, 12 ],
+  "fixedDate" : [ 2022, 1, 31 ],
+  "fixed" : true
+} ]
