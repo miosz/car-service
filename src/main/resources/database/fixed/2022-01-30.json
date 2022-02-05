@@ -1,0 +1,9 @@
+[ {
+  "name" : "Kia",
+  "registrationNumber" : "GD123AB",
+  "productionYear" : 2017,
+  "color" : "WHITE",
+  "serviceDate" : [ 2022, 1, 1 ],
+  "fixedDate" : [ 2022, 1, 30 ],
+  "fixed" : true
+} ]

@@ -1,0 +1,17 @@
+[ {
+  "name" : "BMW",
+  "registrationNumber" : "GA456AA",
+  "productionYear" : 2000,
+  "color" : "WHITE",
+  "serviceDate" : "2022-01-12",
+  "fixedDate" : null,
+  "fixed" : false
+}, {
+  "name" : "Ford",
+  "registrationNumber" : "DW123WR",
+  "productionYear" : 2020,
+  "color" : "SILVER",
+  "serviceDate" : "2022-02-05",
+  "fixedDate" : null,
+  "fixed" : false
+} ]

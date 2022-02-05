@@ -1,0 +1,9 @@
+[ {
+  "name" : "Opel",
+  "registrationNumber" : "GS789EF",
+  "productionYear" : 2019,
+  "color" : "GRAY",
+  "serviceDate" : "2022-01-01",
+  "fixedDate" : "2022-02-03",
+  "fixed" : true
+} ]
